@@ -37,7 +37,7 @@ function onResults(results) {
     document.getElementById("faceCount").innerText =
         "Faces detected: " + count;
 
-    if (count > 1) {
-        addViolation("Multiple Faces Detected");
+    if (count != 1) {
+        addViolation(count === 0 ? "No Face Detected" : "Multiple Faces Detected");
     }
 }
