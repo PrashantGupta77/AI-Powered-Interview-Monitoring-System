@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2f7, #dbe6f6);
+}
+
+.container {
+    width: 1100px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+.dashboard {
+    display: flex;
+    gap: 25px;
+}
+
+.camera-box {
+    flex: 2;
+    background: black;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+#webcam {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.status-box {
+    flex: 1;
+    background: #f8f9fc;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.08);
+}
+
+.status-box h3 {
+    margin-top: 0;
+    color: #34495e;
+    text-align: center;
+}
+
+.status-box p {
+    background: white;
+    padding: 8px;
+    border-radius: 6px;
+    margin: 8px 0;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+#systemMessage {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+
+.warning {
+    background: #f39c12;
+}
+
+.alert {
+    background: #e74c3c;
+}
+
+.terminate {
+    background: #2c3e50;
+}
+
+#startBtn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #3498db;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#startBtn:hover {
+    background: #2980b9;
+}
+
+.log-panel {
+    margin-top: 12px;
+    background: white;
+    border-radius: 8px;
+    height: 120px;
+    overflow-y: auto;
+    padding: 8px;
+    font-size: 13px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
