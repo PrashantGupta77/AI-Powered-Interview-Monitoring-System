@@ -1,4 +1,4 @@
-🎯 AI-Powered Interview Monitoring System
+🎯 AI-Powered Interview Monitoring System -
 
 A lightweight browser-based AI proctoring prototype designed to improve fairness, integrity, and behavioural supervision during remote technical interviews.
 
@@ -6,7 +6,7 @@ The system performs real-time candidate behaviour analysis using client-side com
 
 This project was developed as part of the Sure4Job AI Technical Assignment to demonstrate practical system design, real-time AI inference, and intelligent monitoring workflow implementation.
 
-🚀 Key Highlights
+🚀 Key Highlights -
 
 ✔ Real-time AI inference (~20–30 ms per frame)
 ✔ Fully client-side architecture (zero backend dependency)
@@ -14,13 +14,13 @@ This project was developed as part of the Sure4Job AI Technical Assignment to de
 ✔ Event-driven violation monitoring system
 ✔ Interactive real-time monitoring dashboard
 
-🧠 Problem Statement
+🧠 Problem Statement -
 
 Remote technical interviews often lack behavioural supervision mechanisms, making it difficult for recruiters to ensure candidate authenticity and focus.
 
 This system demonstrates how lightweight browser-side AI models can be used to monitor candidate engagement and detect suspicious behavioural patterns without requiring heavy infrastructure or server-side processing.
 
-✨ Features
+✨ Features -
 
 ✅ Live webcam monitoring
 ✅ Multiple face detection
@@ -32,7 +32,7 @@ This system demonstrates how lightweight browser-side AI models can be used to m
 ✅ Rule-based warning / alert / termination workflow
 ✅ Real-time monitoring dashboard UI
 
-🧰 Tech Stack
+🧰 Tech Stack -
 
 Frontend:
 HTML • CSS • JavaScript
@@ -46,11 +46,11 @@ WebRTC (getUserMedia)
 Page Visibility API
 Clipboard Event Listeners
 
-🏗️ System Architecture
+🏗️ System Architecture -
 
 The project follows a modular client-side AI monitoring architecture where each behaviour detection capability is implemented as an independent module.
 
-🔹 Monitoring Workflow
+🔹 Monitoring Workflow -
 
 Candidate clicks Start Interview
 
@@ -66,11 +66,13 @@ Violation engine evaluates rule thresholds
 
 Dashboard updates system status in real-time
 
-🔹 Detection Pipeline
+🔹 Detection Pipeline -
+
 User → Browser UI → Webcam Stream → Frame Processing
      → Behaviour Detection Modules → Violation Engine
      → Real-Time Dashboard Alerts
-🔹 Design Principles
+
+🔹 Design Principles -
 
 Modular and scalable detection structure
 
@@ -82,13 +84,13 @@ Rule-based decision engine
 
 Clean separation of UI and detection logic
 
-📁 Project Folder Structure
-AI-Interview-Monitoring-System
+📁 Project Folder Structure -
+
+AI-Interview-Monitoring-System/
 │
 ├── index.html
 ├── style.css
-│
-├── modules
+├── modules/
 │   ├── webcam.js
 │   ├── faceDetection.js
 │   ├── eyeTracking.js
@@ -96,39 +98,45 @@ AI-Interview-Monitoring-System
 │   ├── tabMonitor.js
 │   ├── clipboardBlocker.js
 │   └── violationEngine.js
-│
-└── README.md
+└── videos/
+    └── demo.mp4
+
 ⚙️ Behaviour Detection Strategy
-👥 Multiple Face Detection
+
+👥 Multiple Face Detection -
 
 Uses MediaPipe Face Detection model to estimate number of visible faces.
 A violation event is triggered if more than one face appears in the frame.
 
-👀 Eye Gaze Tracking
+👀 Eye Gaze Tracking -
 
 Uses Face Mesh landmark-based gaze estimation by measuring relative iris displacement and temporal smoothing across consecutive frames.
 Violation is triggered if the candidate looks away continuously for more than 5 seconds.
 
-🗣️ Lip Movement Monitoring
+🗣️ Lip Movement Monitoring -
 
 Tracks variation in vertical lip landmark distance over time.
 Continuous oscillation beyond defined threshold for 10 seconds is treated as potential speaking behaviour.
 
-🔁 Tab Switching Detection
+🔁 Tab Switching Detection -
 
 Uses visibilitychange and window blur browser events.
 Violation is triggered when candidate switches tab, minimizes browser, or navigates away.
 
-📋 Clipboard Activity Blocking
+📋 Clipboard Activity Blocking -
 
 Prevents copy, paste, cut, and context-menu actions to discourage unfair assistance.
 
-⚠️ Violation Rule Engine
-Violation Count	System Action
-1 – 2	Warning
-3 – 4	Alert
-5+	Interview Terminated
-⚡ Performance Considerations
+⚠️ Violation Rule Engine -
+
+| Violation Count | System Action        |
+| --------------- | -------------------- |
+| 1 – 2           | Warning              |
+| 3 – 4           | Alert                |
+| 5+              | Interview Terminated |
+
+
+⚡ Performance Considerations -
 
 Runs entirely on client device (no network inference delay)
 
@@ -140,7 +148,7 @@ Works best under adequate lighting conditions
 
 Performance depends on camera resolution and CPU capability
 
-⚠️ Current Limitations
+⚠️ Current Limitations -
 
 Eye gaze estimation accuracy may drop in low-light environments
 
@@ -152,7 +160,7 @@ Behaviour rules are heuristic-based (not ML-trained classifiers)
 
 No persistent backend violation logging
 
-💼 Potential Real-World Use Cases
+💼 Potential Real-World Use Cases -
 
 Remote hiring and coding interview platforms
 
@@ -166,11 +174,14 @@ Corporate remote assessment workflows
 
 Clone repository
 
-git clone https://github.com/PrashantGupta77/AI-Powered-Interview-Monitoring-System
+git clone https://github.com/vertexbuddy-ai-hiring/ai-powered-interview-assistant-PrashantGupta77
+
+Navigate to the project folder -
+cd ai-powered-interview-assistant-PrashantGupta77
 
 Open project folder
 
-Launch index.html in browser
+Launch index.html in browser (via live server - VS Code recommended)
 
 Click Start Interview
 
@@ -189,6 +200,11 @@ Backend violation logging API
 Behaviour analytics dashboard
 
 ML-based behavioural classification
+
+#### Demo Video
+
+- Local video: `./videos/demo.mp4` (video frames work, audio may be muted)  
+- Full demo with audio: [Watch Demo Video] https://drive.google.com/file/d/1lKY2fQfFx6sUvXD9xEFtjXM1pK_SzuB6/view?usp=sharing
 
 👨‍💻 Author
 
